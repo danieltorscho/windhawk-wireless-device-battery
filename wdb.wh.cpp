@@ -2,7 +2,7 @@
 // @id              wireless-device-battery
 // @name            Wireless Device Battery
 // @description     Show battery percentages for Bluetooth accessories and supported USB wireless mice in the notification area.
-// @version         0.3
+// @version         0.3.1
 // @author          danieltorscho
 // @include         explorer.exe
 // @architecture    x86-64
@@ -692,8 +692,8 @@ std::optional<TaskbarView> AttachView(const Xaml::FrameworkElement& icon) {
     view.rows.HorizontalAlignment(Xaml::HorizontalAlignment::Center);
     view.rows.IsHitTestVisible(false);
     try {
-        SetViewProperty(view, icon, Xaml::FrameworkElement::WidthProperty(), winrt::box_value(80.0));
-        SetViewProperty(view, icon, Xaml::FrameworkElement::MinWidthProperty(), winrt::box_value(80.0));
+        SetViewProperty(view, icon, Xaml::FrameworkElement::WidthProperty(), winrt::box_value(56.0));
+        SetViewProperty(view, icon, Xaml::FrameworkElement::MinWidthProperty(), winrt::box_value(56.0));
         for (const auto* name : {L"ContainerGrid", L"ContentPresenter", L"ContentGrid"}) {
             if (const auto element = FindElement(icon, name)) {
                 SetViewProperty(view, element, Xaml::FrameworkElement::WidthProperty(),
